@@ -9,7 +9,7 @@ def handle_job(file_stream, constant_x, constant_y):
     # Do the required work here and receive the result
     # Post result to firebase
     object_to_insert = {"job_name": "dummy_job", "job_status": "Success"}
-    JobDal.insert(object_to_insert)
+    jobDal.insert(object_to_insert)
 
 
 # The request should come with three arguments

@@ -1,16 +1,14 @@
-from .DbConnection import DbConnection
+from .Dal import Dal
 
 
 class JobDal:
 
     def __init__(self):
-        conn = DbConnection.get_connection()
-        self.__db = conn.firebase
-        self.__token = conn.token
+        self.dal = Dal()
 
     def get(self):
-        data = self.__db.child("<Table_Name>").get(self.__token).val()
+        data = self.dal.get("<table_name>")
         return data
 
     def insert(self, object_to_insert):
-        self.__db.child("<Table_Name>").push(object_to_insert, self.__token)
+        self.dal.insert("<table_name>", object_to_insert)
