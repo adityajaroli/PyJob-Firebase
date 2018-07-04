@@ -1,0 +1,12 @@
+# To install all the dependencies
+pip install -r requirements.txt
+
+# To install Pyrebase you should have pip version 9.0.3 or lesser. It doesn't work on latest version on pip
+ 1. Check pip version by typing below command.
+    pip --version
+ 2. If it is greater than 9.0.3 then do the below command
+    pip install --upgrade pip==9.0.3
+
+# To run the server. Make sure you are using python3
+python Application.py
+
