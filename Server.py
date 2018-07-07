@@ -1,5 +1,6 @@
 from flask import Flask
 from controller.JobController import post_job
+from flask_cors import CORS
 
 
 class Server:
@@ -9,6 +10,7 @@ class Server:
 
     def start_server(self, config):
         self.app = Flask(__name__)
+        CORS(self.app)
         self.__define_route()
         self.__run(config)
 
